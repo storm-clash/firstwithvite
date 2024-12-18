@@ -1,0 +1,24 @@
+header {
+  min-height: 7rem;
+  position: sticky;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid black;
+}
+
+.left_Header,
+.center_Header,
+.right_Header {
+  width: 30%;
+  height: 7rem;
+}
+.left_Header {
+  background-color: green;
+}
+
+.center_Header {
+  background-color: blueviolet;
+}

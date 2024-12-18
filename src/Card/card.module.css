@@ -1,0 +1,81 @@
+.card_Wrapper {
+  width: 300px;
+  height: 400px;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.upper_Wraper,
+.down_Wrapper {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.down_Wrapper {
+  background-color: white;
+}
+
+.upper_Wraper {
+  background-color: var(--principal-blue);
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
+}
+.upper_Wraper::after,
+.upper_Wraper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+.upper_Wraper::after {
+  border-radius: 0 0 0 25px;
+  background-color: var(--principal-blue);
+}
+
+.down_Wrapper::after,
+.down_Wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--principal-blue);
+}
+
+.down_Wrapper::after {
+  border-radius: 0 25px 0 0;
+  background-color: white;
+}
+
+/*Card with logo outside*/
+
+.img_card__Wrapper {
+  width: 400px;
+  height: 300px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: green;
+  color: white;
+  position: absolute;
+  top: -25px;
+  right: 50%;
+  transform: translate(50%, -25%);
+}

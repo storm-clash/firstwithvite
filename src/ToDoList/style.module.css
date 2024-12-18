@@ -1,0 +1,16 @@
+.delete_Button {
+  width: fit-content;
+  background-color: red;
+}
+.input_To_Do {
+  height: 40px;
+  width: 250px;
+  border: none;
+  background-color: hsl(0, 0%, 80%);
+}
+
+.li_Wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
