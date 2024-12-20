@@ -69,6 +69,10 @@ button:focus-visible {
 .body_Wrapper > div:nth-child(2n) {
   background-color: lightblue;
 }
+.box {
+  border: 2px solid black;
+  padding: 25px;
+}
 
 .card__Holder {
   display: flex;
@@ -87,5 +91,16 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  body {
+    background-color: white;
+    color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
   }
 }

@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import Resct, { useState } from "react";
+import React, { useState } from "react";
 
 function ToDoList() {
   const [tasks, setTasks] = useState(["Eat", "Exercice"]);
@@ -9,13 +9,39 @@ function ToDoList() {
     setNewTask(e.target.value);
   };
 
-  const addTask = () => {};
+  const addTask = () => {
+    if (newTask.trim() !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewTask("");
+    }
+  };
 
-  const deleteTask = (index) => {};
+  const deleteTask = (index) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  };
 
-  const moveTaskUp = (index) => {};
+  const moveTaskUp = (index) => {
+    if (index > 0) {
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index - 1]] = [
+        updatedTasks[index - 1],
+        updatedTasks[index],
+      ];
+      setTasks(updatedTasks);
+    }
+  };
 
-  const moveTaskDown = (index) => {};
+  const moveTaskDown = (index) => {
+    if (index < tasks.length - 1) {
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index + 1]] = [
+        updatedTasks[index + 1],
+        updatedTasks[index],
+      ];
+      setTasks(updatedTasks);
+    }
+  };
 
   return (
     <>
@@ -23,7 +49,7 @@ function ToDoList() {
         <h1>To Do List</h1>
       </div>
 
-      <div>
+      <div className={styles.flex_row}>
         <input
           className={styles.input_To_Do}
           type="text"
@@ -33,7 +59,7 @@ function ToDoList() {
         ></input>
         <button onClick={addTask}>Add</button>
       </div>
-      <ol>
+      <ol className={styles.ol}>
         {tasks.map((task, index) => (
           <li className={styles.li_Wrapper} key={index}>
             <span className={styles.text}>{task}</span>

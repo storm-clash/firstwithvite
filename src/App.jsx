@@ -10,6 +10,8 @@ import PickerEjercice from "./ColorPicker/Picker.jsx";
 import UpdateComponent from "./UpdateFunction/Update.jsx";
 import UpdateObject from "./UpdateFunction/UpdateObject.jsx";
 import ToDoList from "./ToDoList/ToDo.jsx";
+import UseEffectComponent from "./UseEffect/useEffect.jsx";
+import UseContextComponent from "./UseContext/useContext.jsx";
 
 function App() {
   const fruits = [
@@ -74,6 +76,12 @@ function App() {
         </div>
         <div className="to_do">
           <ToDoList />
+        </div>
+        <div className="useEffect">
+          <UseEffectComponent />
+        </div>
+        <div className="useContext">
+          <UseContextComponent />
         </div>
       </div>
     </>
